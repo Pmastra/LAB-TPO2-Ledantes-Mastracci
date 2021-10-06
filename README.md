@@ -4,7 +4,7 @@
 El trabajo consiste en realizar una página web estática sobre un dominio a elección de cada grupo. Ante la duda si el dominio cumple con los requisitos para realizar el presente trabajo, cada grupo deberá consultar con los docentes y tener alguna confirmación.
 El dominio elegido deberá soportar:
 
-> a) Obtener datos del día de “hoy” (puede ser uno o más datos). Por ejemplo:
+> a) Obtener datos del día de “hoy” (puede ser uno o más datos). Por ejemplo: >
   i) Dominio Clima: Temperatura actual, máxima/mínimo del día. Probabilidad de lluvia
   ii) Dominio Monedas: Cotización de USD, EU, Bitcoin del día. Diferentes cotizaciones según casas de cambio o bancos, etc
   iii) Dominio Acciones: Valor acción YPF, volumen operado, cantidad de operaciones del día, etc.
