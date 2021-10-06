@@ -8,13 +8,14 @@ El dominio elegido deberá soportar:
 **a) Obtener datos del día de “hoy” (puede ser uno o más datos). Por ejemplo:**
 
       i) Dominio Clima: Temperatura actual, máxima/mínimo del día. Probabilidad de lluvia
-
       ii) Dominio Monedas: Cotización de USD, EU, Bitcoin del día. Diferentes cotizaciones según casas de cambio o bancos, etc
-
       iii) Dominio Acciones: Valor acción YPF, volumen operado, cantidad de operaciones del día, etc.
 
-b) Obtener un rango de datos de 10 días antes o después al día de hoy. Ejemplo: la temperatura de los próximos 10 días; precios de productos antes del hotsale de los últimos 10 días. Aclaración: para esta entrega, los datos deben estar de manera estática en las páginas, no hace falta que sean dinámicos ni que cambien al cambiar los días.
+b) Obtener un rango de datos de 10 días antes o después al día de hoy. Ejemplo: la temperatura de los próximos 10 días; precios de productos antes del hotsale de los últimos 10 días. 
+
+**Aclaración:** para esta entrega, los datos deben estar de manera estática en las páginas, no hace falta que sean dinámicos ni que cambien al cambiar los días.
 Ejemplos de dominios podrían ser: El clima, Cotización de monedas o acciones, etc. Precios históricos de productos. Pensar positivamente ;) La entrega deberá tener al menos las siguientes características:
+
 1. Al menos dos páginas estáticas que se puedan navegar de una a otra y volver, utilizando hipervínculos.
 a. La primer página, portada, que muestra el valor del día de hoy
 b. La segunda página que muestre el historial
