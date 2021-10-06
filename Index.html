@@ -9,10 +9,10 @@ and open the template in the editor.
     <head>
         <title>El Bar de la FAI</title>
         <meta charset="UTF-8">
-        <link rel="shortcut icon" href="<img src="https://img.icons8.com/cotton/64/000000/wine-and-grapes--v1.png"/>" />
+        <link rel="shortcut icon" href="https://img.icons8.com/cotton/64/000000/wine-and-grapes--v1.png" />
         <link rel="stylesheet" type="text/css" href="css/estilo.css" id="linkEstilo"/>
-        <script type="text/javascript" src="Script/JQuery.js"></script>
-        <script type="text/javascript" src="Script/funtion.js"></script>
+        <script type="text/javascript" src="javascript/JQuery.js"></script>
+        <script type="text/javascript" src="javascript/function.js"></script>
         <script language="javascript">
         $(document).ready(function () {
         $("#gallery_output img").not(":first").hide();
@@ -32,13 +32,7 @@ and open the template in the editor.
         var rutaEstilo = $(this).attr("href");
         $("#linkEstilo").attr("href", rutaEstilo);
         
-        if($(this).attr("href") !== "css/estilo.css"){
-
-        $(this).attr("href", "css/estilo.css");
-        }else{
-
-        $(this).attr("href", "css/estilo.css");
-        }
+        
         });
         });
         </script>
@@ -47,9 +41,9 @@ and open the template in the editor.
             <a name="home"></a>
         <div class="contenedor">
             <div class="titulo" >
-                <a href= 'javascript:cambiarPestanna(pestanas,pestana0);'><img src="Imagenes/vida.png" style="width: 50px; height: 50px;" alt="LogotipoJuegoDeLaVida" align="left"></a>
+                <a href= 'javascript:cambiarPestanna(pestanas,pestana0);'></a>
 				
-                <h1> EL JUEGO DE LA VIDA EN JAVA </h1>
+                <h1> EL BAR DE LA FAI </h1>
             </div>
             <div class="titulo"></div>
             <div id="pestanas">
@@ -147,9 +141,9 @@ and open the template in the editor.
                 </div>
             </div>
         </div>
-        <div id="cambiarEstilo">
+        <!--<div id="cambiarEstilo">
                 <a href="css/estiloLucho.css" class="enlaceEstilo">Cambiar estilo</a>
-            </div>
+            </div>-->
     </body>
-    <footer> Pagina version 1.0 / Creadores: Gareta Luciano - Mastracci Pablo / Todos los derechos reservados © 2016  </footer>
+    <footer> Pagina version 1.0 / Creadores: Ledantes Brian - Mastracci Pablo / Todos los derechos reservados © 2021  </footer>
 </html>

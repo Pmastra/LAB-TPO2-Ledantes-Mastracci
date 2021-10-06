@@ -3,11 +3,12 @@ html {
     position: relative;
 }
 body{
-    background-image: url("Razer chroma.jpg");
+    background-image: url("bar2.jpg");
     color: white; 
-    background-repeat: repeat-y;
+    /*background-repeat: repeat-y;
     margin: 0;
-    margin-bottom: 40px; 
+    margin-bottom: 40px; */
+    background-size: cover;
 }
 h1,h2{
     
@@ -48,9 +49,9 @@ a:hover{
 
 .contenedor{
     width: 95%;
-    background: black;
+    background: rgb(0, 0, 0);
     color: bisque;
-    padding: 20px 15px 20px 30px;
+    padding: 20px 50px 20px 20px;
     border-radius: 10px;
     box-shadow: 0 10px 10px 0px rgba(0, 0, 0, 0.8);
 }
