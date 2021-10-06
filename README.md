@@ -17,7 +17,7 @@ El dominio elegido deberá soportar:
 Ejemplos de dominios podrían ser: El clima, Cotización de monedas o acciones, etc. Precios históricos de productos. Pensar positivamente ;) La entrega deberá tener al menos las siguientes características:
 
 1. Al menos dos páginas estáticas que se puedan navegar de una a otra y volver, utilizando hipervínculos.
-            a. La primer página, portada, que muestra el valor del día de hoy.
+                  a. La primer página, portada, que muestra el valor del día de hoy.
             b. La segunda página que muestre el historial.
 2. Elementos comunes: Una tabla; un menú, imágenes donde crea necesario
 3. Responsive: el sitio debe adaptarse correctamente entre 640-1280px
