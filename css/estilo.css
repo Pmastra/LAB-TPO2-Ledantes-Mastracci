@@ -207,3 +207,7 @@ margin: 10px auto 0 auto;
 #cambiarEstilo:hover{
     background-color: #FC7373;
 }
+
+#resultado {
+    display: block;
+}
