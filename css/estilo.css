@@ -25,13 +25,13 @@ table{
     text-align: center;
     background-color: black
 }
-applet{ 
+/*applet{ 
     width: 99%;
     margin-left: 0px
-}
+}*/
 
 footer{
-    background-color: goldenrod; text-align: center; height: 25px;
+    background-color: grey; text-align: center; height: 25px;
     color: black;
     border-radius: 5px;
     border: 2px solid bisque;
