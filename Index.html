@@ -49,11 +49,11 @@ and open the template in the editor.
             <div id="pestanas">
                 <ul id=lista>
                     <li id="pestana0"><a href='javascript:cambiarPestanna(pestanas,pestana0);'>Inicio</a></li>
-                    <li id="pestana1"><a href='javascript:cambiarPestanna(pestanas,pestana1);'>Historia</a></li>
-                    <li id="pestana2"><a href='javascript:cambiarPestanna(pestanas,pestana2);'>Funcionamiento y reglas</a></li>
-                    <li id="pestana3"><a href='javascript:cambiarPestanna(pestanas,pestana3);'>Imagenes</a></li>
-                    <li id="pestana4"><a href='javascript:cambiarPestanna(pestanas,pestana4);'>Juego implementado</a></li>
-                    <li id="pestana5"><a href='javascript:cambiarPestanna(pestanas,pestana5);'>Conclusiones y contacto</a></li>
+                    <li id="pestana1"><a href='javascript:cambiarPestanna(pestanas,pestana1);'>Pestaña 2</a></li>
+                    <li id="pestana2"><a href='javascript:cambiarPestanna(pestanas,pestana2);'>Pestaña 3</a></li>
+                    <li id="pestana3"><a href='javascript:cambiarPestanna(pestanas,pestana3);'>Pestaña 4</a></li>
+                    <li id="pestana4"><a href='javascript:cambiarPestanna(pestanas,pestana4);'>Pestaña 5</a></li>
+                    <li id="pestana5"><a href='javascript:cambiarPestanna(pestanas,pestana5);'>Pestaña 6</a></li>
                 </ul>
             </div>
 
@@ -66,64 +66,20 @@ and open the template in the editor.
                     <div id="resultado"></div>
                 </div>
                 <div id="cpestana1">
-                    <p>Este juego fue diseñado por el matemático británico <a href="https://es.wikipedia.org/wiki/John_Horton_Conway">John Horton Conway</a>,conocido por la mayoría precisamente por su teoría de juegos combinatorios, aunque siendo participe también en la teorías como la teoría de nudos, teoría de números y teoría de códigos.</p>
-                    <p>Conway estaba interesado en solventar un problema presentado en los años cuarenta por un matemático de renombre, John Von Newman quien intento crear una máquina hipotética que fuera capaz de construir copias de si misma, cosa que consiguió basándose en un modelo matemático que se desarrollaba en tablero cuadriculado con una gran cantidad de normas complejas, creando lo que pasaría a denominarse desde entonces un autómata celular. El juego de la vida es el exitoso intento de John Horton Conway de simplificar las indeas de John von Newman.</p>
-                    <p>Diseñado en 1970, fue mostrado al público por primera vez en Octubre de ese mismo año, a través de un artículo publicado en la revista Scientific American, en la columna Mathematical Games de Martin Gadner atrayendo rápidamente la atención de la mayoría debido a que a pesar de su tremenda sencillez conseguía, mediante la evolución de los patrones dentro del juego desarrollar un motor muy potente, llegando incluso a equivaler a una máquina universal de Turing, permitiendo la posibilidad de cualquier problema que sea computable algorítmicamente, pueda procesarse mediante el juego de la vida. Es interesante observar como patrones muy complejos pueden surgir a partir de la implementación de unas reglas tan sencillas. </p>
-                    <p>Otro de los factores que impulso el éxito del juego de la vida era su similitud con algunos de los procesos evolutivos que determinan el surgimiento, decadencia y alteraciones que experimentan las sociedades de seres vivos, tanto a nuestro nivel como a nivel celular, y no sólo eso ya que físicos, matemáticos, biólogos e incluso economistas y  filósofos pudieron apreciar su potencial para asemejar de algún modo procesos en sus correspondientes campos, aunque sea a un nivel didáctico en mayor medida. </p>
-        
+                    
                 </div>
                 <div id="cpestana2">
-                    <h1>Conceptos Basicos del juego de la vida:</h1>
-
-                    <p>Este juego está basado en la evolución de estados sucesivos, en los cuales las condiciones del estado futuro dependen solamente de las condiciones del estado anterior, por tanto no se requiere de la entrada de datos durante el desarrollo del mismo, y es tan sólo el estado inicial y las normas del juego lo que determinada el desarrollo del juego. Por tanto la participación en el mismo únicamente consiste en determinar las condiciones iniciales en función del resultado que se quiera obtener en un número de turnos concreto, o a perpetuidad. </p>
-
-                    <p>El juego se desarrolla en un tablero (el “mundo”) infinito teóricamente, y de unas dimensionas prefijadas en la práctica, subdividido en forma de retícula mediante filas y columnas en celdas. Cada una de las celdas de la retícula quedan por tanto rodeadas por otras ocho casillas que determinan su “vecindad”. </p>
-
-                    <p> Estas celdas albergan lo que se denominan “células” que pueden encontrarse en dos estados distintos, célula viva (podría considerarse un “uno lógico”) o célula muerta (“cero lógico”) el estado de una célula en el futuro dependerá tanto de su estado actual como del estado actual de sus células vecinas, siguiendo unas simples reglas establecidas. Una célula al morir deja vacía la celda que ocupaba. </p>
-
-                    <h2>Reglas originales: Leyes genéticas de Conway:</h2>
-
-                    <ul>
-                        <li>Supervivencia: Cada individuo o célula que cumpla el requisito de tener 2 ó 3 vecinos vivos sobrevive a la siguiente generación (por tanto su estado se mantiene inalterado en el siguiente turno.  </li>
-                        <li>Fallecimiento: Una célula viva que tenga menos de 2 vecinos fallece por aislamiento o soledad en el siguiente estado o turno. Una célula viva que tenga más de trés vecinos vivos muere por superpoblación en el siguiente estado o turno. </li>
-                        <li>Nacimiento: Si una celda vacía pasa a tener en su vecindad exactamente 3 células vivas su estado futuro en el siguiente turno será el de célula viva (nacimiento de nuevo individuo). </li>
-
-                    </ul>
-                    <p>Según se empieza a experimentar se encuentra que la población empieza a evolucionar cambios insólitos o inesperados, a ojos del jugador estas reglas a veces crean la sensación de dar un resultado caótico e impredecible. </p>
-                    <p>Normalmente según estas reglas se puede llegar a diversas situaciones final trascurrido un número determinado de turnos: </p>
-
-                    <ul>
-                        <li>Extinción: al cabo de un número finito de generaciones desaparecen todos los miembros de la población o células viva: Cada individuo o célula que cumpla el requisito de tener 2 ó 3 vecinos vivos sobrevive a la siguiente generación (por tanto su estado se mantiene inalterado en el siguiente turno.  </li>
-                        <li>Estabilización: al cabo de un número finito de generaciones la población queda estabilizada, bien de forma rígida e inamovible, bien de forma oscilante entre dos o más formas.</li>
-                        <li>Crecimiento constante: la población crece turno tras turno y se mantiene así un número infinito de generaciones. En un principio esta evolución solo se contemplo de forma teórica, aunque más tarde se encontrarán patrones que crecían de forma indefinida, durante un numero infinito de turnos. </li>
-
-                    </ul>
                     
-                    <p>Estas reglas se denominan leyes genéticas de Conway y se simbolizan como “2,3 / 3” (condiciones de supervivencia / condiciones de nacimiento) y fueron las reglas originales formuladas por John Horton Conway, sin embargo no son las únicas, ya que existen variaciones de éstas. </p>
-                    <p>Para mas informacion sobre patrones del juego,consulte el siguiente link</p>
-
-                    <ul>
-                        <li><a href=http://www.it.uc3m.es/jvillena/irc/practicas/09-10/04mem.pdf>http://www.it.uc3m.es/jvillena/irc/practicas/09-10/04mem.pdf</a></li>
-                    </ul>
-                    <center>
-                        <a href="#home">Home</a>
-                    </center>
                 </div>
                 <div id="cpestana3" onload="javascript:;">
-                    <h1>Asi se visualizaría el juego</h1><br>
-                    <img src="Imagenes/Pantallazo1.png" width="90%" height="90%" alt="Pantallazo1"></a>
-                    <p>Para ver mas imagenes del juego haga click <a href="VisorImagenes.html">AQUI</a></p>
-
-
+                   
                 </div>
                 <div id="cpestana4">
-                    <p>Observemos el juego implementado y probemoslo</p><br>
-                    <applet class="appleJuegoDeLaVida" code="JuegoDeLaVida.Visual/VentanaJuego.class" archive="java/JuegoDeLaVida.jar" alt="Aplicacion JuegoDeLaVida en JAVA">Aplicacion JuegoDeLaVida en JAVA</applet>
-                    <!-- <applet code="JuegoVisualApp.VentanaJuego.java" archive="LaboratorioDeProgramacion.jar" height="800"></applet> -->
+                  
                 </div>
                 <div id="cpestana5">
 
-                    <p>Ante cualquier consulta sobre el juego de la vida puede registrarse con un usuario en nuestra pagina y luego veremos su mensaje. Muchas gracias</p><br>
+                    <p>Ante cualquier consulta puede registrarse con un usuario en nuestra pagina y luego veremos su mensaje. Muchas gracias</p><br>
                     <form>
                     <title>Contacto</title>
                         <fieldset>
@@ -140,9 +96,7 @@ and open the template in the editor.
                 </div>
             </div>
         </div>
-        <!--<div id="cambiarEstilo">
-                <a href="css/estiloLucho.css" class="enlaceEstilo">Cambiar estilo</a>
-            </div>-->
+
             <script type="text/javascript" src="javascript/main.js"></script>
     </body>
     <footer> Pagina version 1.0 / Creadores: Ledantes Brian - Mastracci Pablo / Todos los derechos reservados © 2021  </footer>
