@@ -6,98 +6,65 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <html lang="es">
-    <head>
-        <title>El Bar de la FAI</title>
-        <meta charset="UTF-8">
-        <link rel="shortcut icon" href="https://img.icons8.com/cotton/64/000000/wine-and-grapes--v1.png" />
-        <link rel="stylesheet" type="text/css" href="css/estilo.css" id="linkEstilo"/>
-        <script type="text/javascript" src="javascript/JQuery.js"></script>
-        <script type="text/javascript" src="javascript/function.js"></script>
-        <script language="javascript">
-        $(document).ready(function () {
-        $("#gallery_output img").not(":first").hide();
-        $("#gallery a").click(function () {
-        if ($("#" + this.rel).is(":hidden")) {
-        $("#gallery_output img").slideUp();
-        $("#" + this.rel).slideDown();
-        }
-        });
-        });
-        
-        
-        $(document).ready(function () {
-        $(".enlaceEstilo").click(function (e) {
 
-        e.preventDefault();
-        var rutaEstilo = $(this).attr("href");
-        $("#linkEstilo").attr("href", rutaEstilo);
-        
-        
-        });
-        });
-        </script>
-    </head>
-    <body onload= "javascript:cambiarPestanna(pestanas, pestana0);" >
-            <a name="home"></a>
-        <div class="contenedor">
-            <div class="titulo" >
-                <a href= 'javascript:cambiarPestanna(pestanas,pestana0);'></a>
-				
-                <h1> EL BAR DE LA FAI </h1>
-            </div>
-            <div class="titulo"></div>
-            <div id="pestanas">
-                <ul id=lista>
-                    <li id="pestana0"><a href='javascript:cambiarPestanna(pestanas,pestana0);'>Inicio</a></li>
-                    <li id="pestana1"><a href='javascript:cambiarPestanna(pestanas,pestana1);'>Pestaña 2</a></li>
-                    <li id="pestana2"><a href='javascript:cambiarPestanna(pestanas,pestana2);'>Pestaña 3</a></li>
-                    <li id="pestana3"><a href='javascript:cambiarPestanna(pestanas,pestana3);'>Pestaña 4</a></li>
-                    <li id="pestana4"><a href='javascript:cambiarPestanna(pestanas,pestana4);'>Pestaña 5</a></li>
-                    <li id="pestana5"><a href='javascript:cambiarPestanna(pestanas,pestana5);'>Pestaña 6</a></li>
-                </ul>
-            </div>
+<head>
+    <title>El Bar de la FAI</title>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="https://img.icons8.com/cotton/64/000000/wine-and-grapes--v1.png" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <script type="text/javascript" src="scripts/JQuery.js"></script>
+    <script type="text/javascript" src="scripts/api.js"></script>
+</head>
 
+<body onload="javascript:cambiarPestanna(pestanas, pestana0);">
+    <a name="home"></a>
+    <div class="contenedor">
+        <div class="titulo">
+            <a href='javascript:cambiarPestanna(pestanas,pestana0);'></a>
 
-
-            <div id="contenidopestanas">
-                <div id="cpestana0">
-                    <input type="search" name="" id="buscador">
-                    <button id="btnBuscar" onclick="buscarTrago()">Buscar trago</button>
-                    <div id="resultado"></div>
-                </div>
-                <div id="cpestana1">
-                    
-                </div>
-                <div id="cpestana2">
-                    
-                </div>
-                <div id="cpestana3" onload="javascript:;">
-                   
-                </div>
-                <div id="cpestana4">
-                  
-                </div>
-                <div id="cpestana5">
-
-                    <p>Ante cualquier consulta puede registrarse con un usuario en nuestra pagina y luego veremos su mensaje. Muchas gracias</p><br>
-                    <form>
-                    <title>Contacto</title>
-                        <fieldset>
-                            <legend> Contacto </legend>
-                            <label for="nombreUsuario">Nombre Usuario: </label> <input type="text" id="nombreUsuario"><br/></br>
-                            <label for="telefono">Telefono: </label> <input type="text" id="telefono"><br/></br>
-                            <label for="email">E-Mail: </label> <input type="email" id="email"><br/></br>
-                            <label for="contrasenia">Contrasenia: </label> <input type="password" id="contrasenia"><br/></br>
-                            <label for="texto"></label> <textarea name="Comentarios" rows="10" cols="40" id="texto">Escriba aca sus comentarios...</textarea><br/></br>
-                            <input type="submit" value="Enviar">
-                        </fieldset>
-                    </form>
-
-                </div>
-            </div>
+            <h1> EL BAR DE LA FAI </h1>
+        </div>
+        <div class="titulo"></div>
+        <div id="pestanas">
+            <ul id=lista>
+                <li id="pestana0"><a href='javascript:cambiarPestanna(pestanas,pestana0);'>Inicio</a></li>
+                <li id="pestana1"><a href='javascript:cambiarPestanna(pestanas,pestana1);'>Contacto</a></li>
+            </ul>
         </div>
 
-            <script type="text/javascript" src="javascript/main.js"></script>
-    </body>
-    <footer> Pagina version 1.0 / Creadores: Ledantes Brian - Mastracci Pablo / Todos los derechos reservados © 2021  </footer>
+        <div id="contenidopestanas">
+            <div id="cpestana0">
+                <input type="search" name="" id="buscador">
+                <button id="btnBuscar" onclick="buscarBebidas()">Buscar</button>
+                <div id="resultado"></div>
+            </div>
+            <div id="cpestana1">
+                <p>Ante cualquier consulta puede registrarse con un usuario en nuestra pagina y luego veremos su
+                    mensaje. Muchas gracias</p><br>
+                <form>
+                    <title>Contacto</title>
+                    <fieldset>
+                        <legend> Contacto </legend>
+                        <label for="nombreUsuario">Nombre Usuario: </label> <input type="text"
+                            id="nombreUsuario"><br /></br>
+                        <label for="telefono">Telefono: </label> <input type="text" id="telefono"><br /></br>
+                        <label for="email">E-Mail: </label> <input type="email" id="email"><br /></br>
+                        <label for="contrasenia">Contrasenia: </label> <input type="password"
+                            id="contrasenia"><br /></br>
+                        <label for="texto"></label> <textarea name="Comentarios" rows="10" cols="40"
+                            id="texto">Escriba aca sus comentarios...</textarea><br /></br>
+                        <input type="submit" value="Enviar">
+                    </fieldset>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="scripts/main.js"></script>
+</body>
+<footer>
+    Pagina version 1.0 / Creadores: Ledantes Brian - Mastracci Pablo / Todos los derechos reservados © 2021
+</footer>
+
 </html>

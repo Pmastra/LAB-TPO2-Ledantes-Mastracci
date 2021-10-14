@@ -3,7 +3,7 @@ html {
     position: relative;
 }
 body{
-    background-image: url("bar2.jpg");
+    background-image: url("../res/imgs/bar2.jpg");
     color: white; 
     /*background-repeat: repeat-y;
     margin: 0;
