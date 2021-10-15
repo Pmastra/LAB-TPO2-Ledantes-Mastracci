@@ -36,7 +36,7 @@ function createDrinkItem(drink) {
 }
 
 function createDrinkList(drinks) {
-    var content = '<ul class="list-group list-group-flush">'
+    var content = '<ul class="lista-bebidas list-group list-group-flush">'
 
     if(drinks != null) {
         drinks.forEach(drink => {
