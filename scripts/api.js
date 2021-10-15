@@ -3,25 +3,27 @@ const searchCocktailByName = 'search.php?s=';
 const getCocktailById = 'lookup.php?i=';
 const randomCocktail = 'random.php';
 
-function makeQuery(query, doSomething) {
+function makeQuery(query, doSomething, functionError) {
     fetch(url + query)
         .then(result => result.json())
         .then(data => {
             doSomething(data);
         })
-        .catch(err => console.log(err));
+        .catch(err => {
+            functionError();
+        });
 }
 
-function searchDrink(name, doSomething) {
+function searchDrink(name, doSomething, functionError) {
     makeQuery(searchCocktailByName + name, (data) => {
         doSomething(data.drinks);
-    });
+    }, functionError);
 }
 
-function getDrink(id, doSomething) {
+function getDrink(id, doSomething, functionError) {
     makeQuery(getCocktailById + id, (data) => {
         doSomething(data.drinks[0]);
-    });
+    }, functionError);
 }
 /*
 Search cocktail by name

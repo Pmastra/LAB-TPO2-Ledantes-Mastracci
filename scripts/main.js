@@ -15,7 +15,7 @@ function showDrinks(drinks) {
 function createDrinkItem(drink) {
     var link = 'drink.html?id=' + drink.idDrink;
     
-    var card = 
+    var card = '<a href="'+ link +'">' +
     '<div class="card mb-3" style="max-width: 540px;">'+
         '<div class="row g-0">'+
             '<div class="col-md-4">'+
@@ -28,7 +28,8 @@ function createDrinkItem(drink) {
                 '<p class="card-text"><small class="text-muted">'+ drink.strCategory +'</small></p>'+
             '</div>'+
         '</div>'+
-    '</div>';
+    '</div>' +
+    '</a>';
 
     return card;
 }
