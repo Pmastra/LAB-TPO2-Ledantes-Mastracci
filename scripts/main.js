@@ -14,15 +14,31 @@ function showDrinks(drinks) {
 
 function createDrinkItem(drink) {
     var link = 'drink.html?id=' + drink.idDrink;
-    return '<a href="' + link + '">' + drink.strDrink + '</a>';
+    
+    var card = 
+    '<div class="card mb-3" style="max-width: 540px;">'+
+        '<div class="row g-0">'+
+            '<div class="col-md-4">'+
+                '<img src="'+ drink.strDrinkThumb +'" class="img-fluid rounded-start" alt="...">'+
+            '</div>'+
+        '<div class="col-md-8">'+
+            '<div class="card-body">'+
+                '<h3 class="card-title">'+ drink.strDrink +'</h3>'+
+                '<p class="card-text"><small class="text-muted">'+ drink.strAlcoholic +'</small></p>'+
+                '<p class="card-text"><small class="text-muted">'+ drink.strCategory +'</small></p>'+
+            '</div>'+
+        '</div>'+
+    '</div>';
+
+    return card;
 }
 
 function createDrinkList(drinks) {
-    var content = '<ul>'
+    var content = '<ul class="list-group list-group-flush">'
 
     if(drinks != null) {
         drinks.forEach(drink => {
-            content += '<li>' + createDrinkItem(drink) + '</li>';
+            content += '<li class="list-group-item">' + createDrinkItem(drink) + '</li>';
         });
     }
 
