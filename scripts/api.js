@@ -1,6 +1,6 @@
 const url = 'https://www.thecocktaildb.com/api/json/v1/1/';
 const searchCocktailByName = 'search.php?s=';
-const searchIngredientByName = 'search.php?f=';
+const getCocktailById = 'lookup.php?i=';
 const randomCocktail = 'random.php';
 
 function makeQuery(query, doSomething) {
@@ -14,6 +14,12 @@ function makeQuery(query, doSomething) {
 
 function searchDrink(name, doSomething) {
     makeQuery(searchCocktailByName + name, (data) => {
+        doSomething(data.drinks);
+    });
+}
+
+function getDrink(id, doSomething) {
+    makeQuery(getCocktailById + id, (data) => {
         doSomething(data.drinks);
     });
 }
