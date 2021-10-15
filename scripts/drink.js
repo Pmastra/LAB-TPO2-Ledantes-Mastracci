@@ -6,10 +6,6 @@ const title = document.getElementById("drinkName");
 const img = document.getElementById("drinkImage");
 const instructions = document.getElementById("drinkInstructions");
 
-console.log(title);
-
-var drink = getDrink(idDrink, showDrink);
-
 function getParams() {
     var paramstr = window.location.search.substr(1);
     var paramarr = paramstr.split("&");
@@ -27,7 +23,10 @@ function getParams() {
 
 function showDrink(drink) {
     console.log(drink);
+
     img.src = drink.strDrinkThumb;
     title.innerHTML = drink.strDrink;
     instructions.innerHTML = drink.strInstructions;
 }
+
+getDrink(idDrink, showDrink);

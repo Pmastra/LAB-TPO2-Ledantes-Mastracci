@@ -20,7 +20,7 @@ function searchDrink(name, doSomething) {
 
 function getDrink(id, doSomething) {
     makeQuery(getCocktailById + id, (data) => {
-        doSomething(data.drinks);
+        doSomething(data.drinks[0]);
     });
 }
 /*
