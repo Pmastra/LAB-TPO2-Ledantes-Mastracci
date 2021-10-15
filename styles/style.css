@@ -25,10 +25,6 @@ table{
     text-align: center;
     background-color: black
 }
-applet{ 
-    width: 99%;
-    margin-left: 0px
-}
 
 footer{
     background-color: goldenrod; text-align: center; height: 25px;
@@ -181,24 +177,6 @@ display: block;
 margin: 10px auto 0 auto;
 }
 
-.appleJuegoDeLaVida{
-    position: relative;
-    height: 720px;
-    width: 1280px;
-    align-content: center;
-}
-
-#cambiarEstilo{
-    width: 120px;
-    height: 25px;
-    top: -35px;
-    left: 1100px;
-    padding-top: 5px;
-    border: 2px solid bisque;
-    text-align: center;
-    background-color: darkgrey;
-}
-
 #cambiarEstilo a{
     text-decoration: none;
     color: bisque;
@@ -208,7 +186,17 @@ margin: 10px auto 0 auto;
     background-color: #FC7373;
 }
 
-#resultado {
-    display: block;
+.resultado {
+    display: inline;
+    margin-top: 16px;
+    width: 95%;
+    background: rgb(0, 0, 0);
+    color: bisque;
+    padding: 30px 50px 20px 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px 0px rgba(0, 0, 0, 0.8);
+}
+.element.style {
+    display: inline;
     margin-top: 16px;
 }

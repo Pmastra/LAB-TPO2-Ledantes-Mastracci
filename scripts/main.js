@@ -62,7 +62,7 @@ function cambiarPestanna(pestanas, pestanna) {
     // y el padding de las pesta�as.
     while (typeof listacPestannas.getElementsByTagName('div')[i] !== 'undefined') {
         $(document).ready(function () {
-            $(listacPestannas.getElementsByTagName('div')).css('display', 'none');
+            $(listacPestannas.getElementsByTagName('div')).css('display', 'block');
             $(listaPestannas.getElementsByTagName('li')).css('background', '');
             $(listaPestannas.getElementsByTagName('li')).css('padding-bottom', '');
         });
@@ -74,7 +74,7 @@ function cambiarPestanna(pestanas, pestanna) {
         // cambia el color de la pesta�a y aumenta el padding para que tape el  
         // borde superior del contenido que esta juesto debajo y se vea de este 
         // modo que esta seleccionada.
-        $(cpestanna).css('display', '');
+        $(cpestanna).css('display', 'none');
         $(pestanna).css('background', 'dimgray');
         $(pestanna).css('padding-bottom', '2px');
     });
