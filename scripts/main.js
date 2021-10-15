@@ -23,7 +23,7 @@ function createDrinkItem(drink) {
             '</div>'+
         '<div class="col-md-8">'+
             '<div class="card-body">'+
-                '<a href="'+ link +'">' +
+                '<a href="'+ link +'" target="_blank" >' +
                 '<h3 class="card-title">'+ drink.strDrink +'</h3>' +
                 '</a>' +
                 '<p class="card-text"><small class="text-muted">'+ drink.strAlcoholic +'</small></p>'+
