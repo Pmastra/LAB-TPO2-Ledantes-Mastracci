@@ -4,7 +4,7 @@ html {
 }
 body{
     background-image: url("../res/imgs/bar2.jpg");
-    color: white; 
+    /*color: white; */
     /*background-repeat: repeat-y;
     margin: 0;
     margin-bottom: 40px; */
@@ -205,6 +205,10 @@ margin: 10px auto 0 auto;
 }
 
 .card {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    text-align: center;
     background-color: rgb(233, 230, 230);
     box-shadow: 0 0px 10px 10px rgba(204, 204, 204, 0.8);  
 }
