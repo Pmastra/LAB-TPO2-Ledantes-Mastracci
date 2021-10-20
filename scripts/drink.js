@@ -27,13 +27,51 @@ function showDrink(drink) {
     img.src = drink.strDrinkThumb;
     title.innerHTML = drink.strDrink;
     instructions.innerHTML = drink.strInstructions;
+
+    showIngredients(drink);
 }
 
 getDrink(idDrink, showDrink, functionError);
+
+
+function showIngredients(drink) {
+    var nombresDeIngredientes = [];
+    nombresDeIngredientes[0] = drink.strIngredient1;
+    nombresDeIngredientes[1] = drink.strIngredient2;
+    nombresDeIngredientes[2] = drink.strIngredient3;
+    nombresDeIngredientes[3] = drink.strIngredient4;
+    nombresDeIngredientes[4] = drink.strIngredient5;
+    nombresDeIngredientes[5] = drink.strIngredient6;
+    nombresDeIngredientes[6] = drink.strIngredient7;
+    nombresDeIngredientes[7] = drink.strIngredient8;
+    nombresDeIngredientes[8] = drink.strIngredient9;
+    nombresDeIngredientes[9] = drink.strIngredient10;
+    nombresDeIngredientes[10] = drink.strIngredient11;
+    nombresDeIngredientes[11] = drink.strIngredient12;
+    nombresDeIngredientes[12] = drink.strIngredient13;
+    nombresDeIngredientes[13] = drink.strIngredient14;
+    nombresDeIngredientes[14] = drink.strIngredient15;
+
+    console.log(nombresDeIngredientes);
+
+    var maxIngredients = 15;
+    var i = 0;
+
+    getIngredient(nombresDeIngredientes[i], showIngredient, () => {});
+
+    while(i < maxIngredients && nombresDeIngredientes[i] != null) {
+        getIngredient(nombresDeIngredientes[i], showIngredient, () => {});
+        i++;
+    }
+    
+}
+
+function showIngredient(ingredient) {
+    console.log(ingredient);
+}
 
 function functionError(error) {
     console.log(error)
     img.src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi1.wp.com%2Ftechdirectarchive.com%2Fwp-content%2Fuploads%2F2020%2F06%2F1_pUEZd8z__1p-7ICIO1NZFA.png%3Ffit%3D978%252C542%26ssl%3D1&f=1&nofb=1";
     title.innerHTML = "Error al cargar bebida";
-    instructions.innerHTML = drink.strInstructions;
 }
