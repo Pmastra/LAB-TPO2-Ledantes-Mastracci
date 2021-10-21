@@ -5,6 +5,7 @@ const idDrink = params['id'];
 const title = document.getElementById("drinkName");
 const img = document.getElementById("drinkImage");
 const instructions = document.getElementById("drinkInstructions");
+const ingredientsList = document.getElementById("listaIngredientes");
 
 function getParams() {
     var paramstr = window.location.search.substr(1);
@@ -68,6 +69,20 @@ function showIngredients(drink) {
 
 function showIngredient(ingredient) {
     console.log(ingredient);
+    ingredientsList.innerHTML += createIngredientItem(ingredient);
+}
+
+function createIngredientItem(ingredient) {
+    let content = 
+    `<li>
+        <div class="card" style="width: 18rem;">
+            <img src="${ingredient.image}" class="card-img-top">
+            <div class="card-body">
+            <p class="card-text">${ingredient.strIngredient}</p>
+            </div>
+        </div>
+    </li>`;
+    return content;
 }
 
 function functionError(error) {

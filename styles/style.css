@@ -205,10 +205,10 @@ margin: 10px auto 0 auto;
 }
 
 .card {
-    position: absolute;
+    /*position: absolute;
     top: 10%;
     left: 10%;
-    text-align: center;
+    text-align: center;*/
     background-color: rgb(233, 230, 230);
     box-shadow: 0 0px 10px 10px rgba(204, 204, 204, 0.8);  
 }
