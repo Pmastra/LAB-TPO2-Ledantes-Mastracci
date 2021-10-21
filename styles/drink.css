@@ -25,6 +25,7 @@ body {
   .col-drink {
     display: flex;
     justify-content: flex-end;
+    min-width: 300px;
   }
 
   .title {
@@ -42,11 +43,12 @@ body {
     box-shadow: 0 0px 10px 10px rgba(204, 204, 204, 0.8);
   }
 
-  ul {
+  #listaIngredientes {
     list-style-type: none;
     margin-top: 32px;
   }
 
-  li {
+  .ingrediente {
     margin-bottom: 32px;
+    margin-right: 8px;
   }

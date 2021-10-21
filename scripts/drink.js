@@ -12,7 +12,7 @@ getDrink(idDrink, showDrink, errorDrink);
 function getParams() {
     var paramstr = window.location.search.substr(1);
     var paramarr = paramstr.split("&");
-    
+
     for (var i = 0; i < paramarr.length; i++) {
         var tmparr = paramarr[i].split("=");
         params[tmparr[0]] = tmparr[1];
@@ -53,7 +53,7 @@ function showIngredients(drink) {
     var maxIngredients = 15;
     var i = 0;
 
-    while(i < maxIngredients && nombresDeIngredientes[i] != null) {
+    while (i < maxIngredients && nombresDeIngredientes[i] != null) {
         getIngredient(nombresDeIngredientes[i], showIngredient, errorIngredient);
         i++;
     }
@@ -64,15 +64,15 @@ function showIngredient(ingredient) {
 }
 
 function createIngredientItem(ingredient) {
-    let content = 
-    `<li>
-        <div class="card ingre" style="width: 8rem;">
+    let content =
+    `<div class="col ingrediente">
+            <div class="card ingre" style="width: 8rem;">
             <img src="${ingredient.image}" class="card-img-top">
             <div class="card-body">
             <p class="card-text">${ingredient.strIngredient}</p>
             </div>
         </div>
-    </li>`;
+    </div>`;
     return content;
 }
 
@@ -84,8 +84,8 @@ function errorDrink(error) {
 
 function errorIngredient(error) {
     console.log(error);
-    ingredientsList.innerHTML += 
-    `<li>
+    ingredientsList.innerHTML +=
+        `<li>
         <div class="card ingre" style="width: 8rem;">
             <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi1.wp.com%2Ftechdirectarchive.com%2Fwp-content%2Fuploads%2F2020%2F06%2F1_pUEZd8z__1p-7ICIO1NZFA.png%3Ffit%3D978%252C542%26ssl%3D1&f=1&nofb=1" class="card-img-top">
             <div class="card-body">
