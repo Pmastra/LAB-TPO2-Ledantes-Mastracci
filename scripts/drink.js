@@ -7,6 +7,8 @@ const img = document.getElementById("drinkImage");
 const instructions = document.getElementById("drinkInstructions");
 const ingredientsList = document.getElementById("listaIngredientes");
 
+getDrink(idDrink, showDrink, errorDrink);
+
 function getParams() {
     var paramstr = window.location.search.substr(1);
     var paramarr = paramstr.split("&");
@@ -23,17 +25,12 @@ function getParams() {
 }
 
 function showDrink(drink) {
-    console.log(drink);
-
     img.src = drink.strDrinkThumb;
     title.innerHTML = drink.strDrink;
     instructions.innerHTML = drink.strInstructions;
 
     showIngredients(drink);
 }
-
-getDrink(idDrink, showDrink, functionError);
-
 
 function showIngredients(drink) {
     var nombresDeIngredientes = [];
@@ -53,22 +50,16 @@ function showIngredients(drink) {
     nombresDeIngredientes[13] = drink.strIngredient14;
     nombresDeIngredientes[14] = drink.strIngredient15;
 
-    console.log(nombresDeIngredientes);
-
     var maxIngredients = 15;
     var i = 0;
 
-
-
     while(i < maxIngredients && nombresDeIngredientes[i] != null) {
-        getIngredient(nombresDeIngredientes[i], showIngredient, () => {});
+        getIngredient(nombresDeIngredientes[i], showIngredient, errorIngredient);
         i++;
     }
-    
 }
 
 function showIngredient(ingredient) {
-    console.log(ingredient);
     ingredientsList.innerHTML += createIngredientItem(ingredient);
 }
 
@@ -85,8 +76,21 @@ function createIngredientItem(ingredient) {
     return content;
 }
 
-function functionError(error) {
-    console.log(error)
+function errorDrink(error) {
+    console.log(error);
     img.src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi1.wp.com%2Ftechdirectarchive.com%2Fwp-content%2Fuploads%2F2020%2F06%2F1_pUEZd8z__1p-7ICIO1NZFA.png%3Ffit%3D978%252C542%26ssl%3D1&f=1&nofb=1";
     title.innerHTML = "Error al cargar bebida";
+}
+
+function errorIngredient(error) {
+    console.log(error);
+    ingredientsList.innerHTML += 
+    `<li>
+        <div class="card ingre" style="width: 8rem;">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi1.wp.com%2Ftechdirectarchive.com%2Fwp-content%2Fuploads%2F2020%2F06%2F1_pUEZd8z__1p-7ICIO1NZFA.png%3Ffit%3D978%252C542%26ssl%3D1&f=1&nofb=1" class="card-img-top">
+            <div class="card-body">
+            <p class="card-text">Error al cargar ingrediente</p>
+            </div>
+        </div>
+    </li>`;
 }
