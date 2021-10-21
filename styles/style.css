@@ -199,8 +199,12 @@ margin: 10px auto 0 auto;
     background: rgb(0, 0, 0);
 }
 
+.lista-bebidas {
+    padding: 30px;
+}
+
 .list-group-item {
-    margin: 30px;
+    margin-bottom: 8px;
     background-color: rgb(0, 0, 0);
 }
 
