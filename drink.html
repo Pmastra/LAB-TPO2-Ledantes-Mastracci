@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="https://img.icons8.com/cotton/64/000000/wine-and-grapes--v1.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <title>El Bar de la FAI segunda</title>
+  <link rel="stylesheet" type="text/css" href="styles/drink.css" />
+</head>
+
+<body>
+  <div class="contenedor container-fluid">
+    <h1 class="card-title title" id="IngredientesStr">Información de bebida</h1>
+    <div class="row contenido">
+      <div class="col-4 col-drink">
+        <div class="card drink" style="width: 18rem;">
+          <img src="res/imgs/loading.gif" class="card-img-top" id="drinkImage">
+          <div class="card-body">
+            <h2 class="card-title" id="drinkName">Cargando...</h2>
+            <p class="card-text "><strong>Categoria: </strong>
+              <span id="drinkCategoria">...</span>
+            </p>
+            <p class="card-text"><strong>Tipo: </strong>
+              <span id="drinkTipo">...</span>
+            </p>
+            <p class="card-text"><strong>Instrucciones: </strong>
+              <span id="drinkInstructions">...</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div>
+          <h4 class="card-title" id="IngredientesStr">Ingredientes:</h4>
+          <div class="container" id="listaIngredientes">
+            <!-- aca van los ingredientes -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="scripts/api.js"></script>
+  <script src="scripts/drink.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
