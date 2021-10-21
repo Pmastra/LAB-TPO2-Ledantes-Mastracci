@@ -58,7 +58,7 @@ function showIngredients(drink) {
     var maxIngredients = 15;
     var i = 0;
 
-    getIngredient(nombresDeIngredientes[i], showIngredient, () => {});
+
 
     while(i < maxIngredients && nombresDeIngredientes[i] != null) {
         getIngredient(nombresDeIngredientes[i], showIngredient, () => {});
@@ -75,7 +75,7 @@ function showIngredient(ingredient) {
 function createIngredientItem(ingredient) {
     let content = 
     `<li>
-        <div class="card" style="width: 18rem;">
+        <div class="card ingre" style="width: 8rem;">
             <img src="${ingredient.image}" class="card-img-top">
             <div class="card-body">
             <p class="card-text">${ingredient.strIngredient}</p>

@@ -1,52 +1,69 @@
-html {
-    min-height: 100%;
-    position: relative;
-}
 body{
     background-image: url("../res/imgs/bar2.jpg");
-    /*color: white; */
-    /*background-repeat: repeat-y;
-    margin: 0;
-    margin-bottom: 40px; */
     background-size: cover;
-}
-h1,h2{
-    
-    color: whitesmoke;
-    text-align: left;
-    font-size: xx-large
-}
-p,ul{
-    text-align: justify;
-    font-style: normal;
-    font-size: 2.5ex
-}
-table{
-    text-align: center;
-    background-color: black
-}
-
-footer{
-    background-color: goldenrod; text-align: center; height: 25px;
-    color: black;
-    border-radius: 5px;
-    border: 2px solid bisque;
-    position: absolute;
-    bottom: 5px;
-    margin-left: 10px;
-    margin-right: 10px;
-    width: 99%;
-}
-
-a:hover{
-    color:goldenrod
 }
 
 .card {
-    position: absolute;
+    /*position: absolute;*/
     top: 10%;
     left: 10%;
     text-align: center;
     background-color: rgb(233, 230, 230);
     box-shadow: 0 0px 10px 10px rgba(204, 204, 204, 0.8);  
+}
+
+.contenedor {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 100px;
+    width:60%;
+    background: rgb(0, 0, 0);
+    padding: 30px 50px 20px 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px 0px rgba(0, 0, 0, 0.8);
+}
+
+.row {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    box-shadow: 0 0px 10px 10px rgba(204, 204, 204, 0.8);
+    border-radius: 10px;
+}
+.col {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#listaIngredientes {
+    background-color: rgb(0, 0, 0);
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 70px;
+    margin-bottom: 30px;
+
+}
+
+h6 {
+    margin-top: 80px;
+    margin-left: 60px;
+    color: whitesmoke;
+    font-size: xx-large
+}
+h7 {
+    margin-left: 10px;
+    margin-top: 80px;
+    color: whitesmoke;
+    font-size: xx-large
+}
+
+.ingre {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }

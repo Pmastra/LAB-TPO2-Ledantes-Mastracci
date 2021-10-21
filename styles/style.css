@@ -205,13 +205,6 @@ margin: 10px auto 0 auto;
 }
 
 .card {
-<<<<<<< HEAD
-=======
-    /*position: absolute;
-    top: 10%;
-    left: 10%;
-    text-align: center;*/
->>>>>>> b47ad40aa8eefed8b96fa526c403be9f11c9e54e
     background-color: rgb(233, 230, 230);
     box-shadow: 0 0px 10px 10px rgba(204, 204, 204, 0.8);  
 }
