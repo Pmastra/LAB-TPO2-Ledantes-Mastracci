@@ -5,6 +5,8 @@ const idDrink = params['id'];
 const title = document.getElementById("drinkName");
 const img = document.getElementById("drinkImage");
 const instructions = document.getElementById("drinkInstructions");
+const categoriy = document.getElementById("drinkCategoria");
+const type = document.getElementById("drinkTipo");
 const ingredientsList = document.getElementById("listaIngredientes");
 
 getDrink(idDrink, showDrink, errorDrink);
@@ -27,7 +29,11 @@ function getParams() {
 function showDrink(drink) {
     img.src = drink.strDrinkThumb;
     title.innerHTML = drink.strDrink;
+    categoriy.innerHTML = drink.strCategory;
+    type.innerHTML = drink.strAlcoholic;
     instructions.innerHTML = drink.strInstructions;
+
+    console.log(drink);
 
     showIngredients(drink);
 }
@@ -60,12 +66,13 @@ function showIngredients(drink) {
 }
 
 function showIngredient(ingredient) {
+    console.log(ingredient);
     ingredientsList.innerHTML += createIngredientItem(ingredient);
 }
 
 function createIngredientItem(ingredient) {
     let content =
-    `<div class="col ingrediente">
+        `<div class="col ingrediente">
             <div class="card ingre" style="width: 8rem;">
             <img src="${ingredient.image}" class="card-img-top">
             <div class="card-body">
