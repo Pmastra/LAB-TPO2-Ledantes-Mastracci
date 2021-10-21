@@ -55,3 +55,15 @@ body {
     margin-right: 32px;
     min-width: 120px;
   }
+
+  footer{
+    background-color: goldenrod; text-align: center; height: 25px;
+    color: black;
+    border-radius: 5px;
+    border: 2px solid bisque;
+    position: absolute;
+    bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 96%;
+}
