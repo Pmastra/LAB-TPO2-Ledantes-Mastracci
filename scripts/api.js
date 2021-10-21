@@ -29,6 +29,7 @@ function getDrink(id, doSomething, functionError) {
 
 function getIngredient(name, doSomething, functionError) {
     makeQuery(getIngredientByName + name, (data) => {
+        data.ingredients[0].image = `https://www.thecocktaildb.com/images/ingredients/${data.ingredients[0].strIngredient}.png`
         doSomething(data.ingredients[0]);
     }, functionError);
 }
