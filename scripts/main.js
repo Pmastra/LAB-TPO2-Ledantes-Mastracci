@@ -2,37 +2,11 @@ var input = document.getElementById("buscador");
 var dinksList = document.getElementById("resultado");
 
 function buscarBebidas() {
-    var search = input.value;
-
-    searchDrink(search, showDrinks);
+    searchDrink(input.value, showDrinks);
 }
 
 function showDrinks(drinks) {
     dinksList.innerHTML = createDrinkList(drinks);
-    console.log(drinks);
-}
-
-function createDrinkItem(drink) {
-    var link = 'drink.html?id=' + drink.idDrink;
-    
-    var card =
-    '<div class="card mb-3" style="max-width: 540px;">'+
-        '<div class="row g-0">'+
-            '<div class="col-md-4">'+
-                '<img src="'+ drink.strDrinkThumb +'" class="img-fluid rounded-start" alt="...">'+
-            '</div>'+
-        '<div class="col-md-8">'+
-            '<div class="card-body">'+
-                '<a href="'+ link +'" target="_blank" >' +
-                '<h3 class="card-title">'+ drink.strDrink +'</h3>' +
-                '</a>' +
-                '<p class="card-text"><small class="text-muted">'+ drink.strAlcoholic +'</small></p>'+
-                '<p class="card-text"><small class="text-muted">'+ drink.strCategory +'</small></p>'+
-            '</div>'+
-        '</div>'+
-    '</div>';
-
-    return card;
 }
 
 function createDrinkList(drinks) {
@@ -40,7 +14,7 @@ function createDrinkList(drinks) {
 
     if(drinks != null) {
         drinks.forEach(drink => {
-            content += '<li class="list-group-item">' + createDrinkItem(drink) + '</li>';
+            content += `<li class="list-group-item">${createDrinkItem(drink)}</li>`;
         });
     }
 
@@ -48,6 +22,28 @@ function createDrinkList(drinks) {
     return content;
 }
 
+function createDrinkItem(drink) {
+    var link = `drink.html?id=${drink.idDrink}`;
+    
+    var card =
+    `<div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+            <div class="col-md-4">
+                <img src="${drink.strDrinkThumb}" class="img-fluid rounded-start">
+            </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <a href="${link}" target="_blank" >
+                <h3 class="card-title">${drink.strDrink}</h3>
+                </a>
+                <p class="card-text"><small class="text-muted">${drink.strAlcoholic}</small></p>
+                <p class="card-text"><small class="text-muted">${drink.strCategory}</small></p>
+            </div>
+        </div>
+    </div>`;
+
+    return card;
+}
 
 // Dadas la division que contiene todas las pesta�as y la de la pesta�a que se 
 // quiere mostrar, la funcion oculta todas las pesta�as a excepcion de esa.
