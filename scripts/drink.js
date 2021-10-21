@@ -72,13 +72,11 @@ function showIngredient(ingredient) {
 
 function createIngredientItem(ingredient) {
     let content =
-        `<div class="col ingrediente">
-            <div class="card ingre" style="width: 8rem;">
-            <img src="${ingredient.image}" class="card-img-top">
-            <div class="card-body">
-            <p class="card-text">${ingredient.strIngredient}</p>
-            </div>
-        </div>
+    `<div class="card ingrediente" style="width: 8rem;">
+        <img src="${ingredient.image}" class="card-img-top">
+        <div class="card-body">
+            <p class="card-text">${ingredient.strIngredient}</p>   
+        </div>    
     </div>`;
     return content;
 }
