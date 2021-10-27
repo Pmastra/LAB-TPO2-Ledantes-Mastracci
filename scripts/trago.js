@@ -11,7 +11,7 @@ obtenerTrago(idTrago, mostrarTrago, mostarErrorTrago);
 
 /**
  * Obtiene el id del trago que se envia por parametro en la url.
- * @returns el id del trago
+ * @returns el id del trago.
  */
 function obtenerIdTrago() {
     let params = {};
@@ -33,7 +33,6 @@ function obtenerIdTrago() {
 
 /**
  * Muesta en la vista la informacion del trago.
- * @param {un trago} trago 
  */
 function mostrarTrago(trago) {
     imagenTrago.src = trago.strDrinkThumb;
@@ -47,7 +46,6 @@ function mostrarTrago(trago) {
 
 /**
  * Muesta en la vista los ingredientes de un trago.
- * @param {un trago} trago 
  */
 function mostarIngredientes(trago) {
     var nombresDeIngredientes = [];
@@ -72,7 +70,7 @@ function mostarIngredientes(trago) {
 
     // consulta a la api cada ingrediente del trago
     while (i < maxIngredientes && nombresDeIngredientes[i] != null) {
-        obtenetIngrediente(nombresDeIngredientes[i],
+        obtenerIngredientePorNombre(nombresDeIngredientes[i],
             mostrarIngrediente, 
             mostrarErrorIngrediente);
         i++;
@@ -81,7 +79,6 @@ function mostarIngredientes(trago) {
 
 /**
  * Muesta en la vista un ingrediente.
- * @param {un ingrediente} ingrediente 
  */
 function mostrarIngrediente(ingrediente) {
     divListaIngredientes.innerHTML += crearItemIngrediente(ingrediente);
@@ -89,8 +86,7 @@ function mostrarIngrediente(ingrediente) {
 
 /**
  * Crea un ingrediente para mostrar en la vista.
- * @param {un ingrediente} ingrediente 
- * @returns 
+ * @returns una tarjeta del ingrediente.
  */
 function crearItemIngrediente(ingrediente) {
     let content =
@@ -105,7 +101,6 @@ function crearItemIngrediente(ingrediente) {
 
 /**
  * Muestra al usuario un error al obtener un trago.
- * @param {un error} error 
  */
 function mostarErrorTrago(error) {
     console.log(error);
@@ -115,7 +110,6 @@ function mostarErrorTrago(error) {
 
 /**
  * Muestra al usuario un error al obtener un ingrediente.
- * @param {*} error 
  */
 function mostrarErrorIngrediente(error) {
     console.log(error);

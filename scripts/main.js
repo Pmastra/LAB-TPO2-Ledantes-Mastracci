@@ -10,7 +10,6 @@ function buscarTragos() {
 
 /**
  * Muestra en la vista el listado de tragos buscados.
- * @param {arraglo de tragos que devuelve la API} listaTragos 
  */
 function mostrarListadoTragos(listaTragos) {
     divListaTragos.innerHTML = crearListadoTrago(listaTragos);
@@ -18,8 +17,7 @@ function mostrarListadoTragos(listaTragos) {
 
 /**
  * Crea un listado de tragos para mostrar en la vista.
- * @param {arreglo de tragos} listaTragos 
- * @returns 
+ * @returns una lista <ul> con los tragos.
  */
 function crearListadoTrago(listaTragos) {
     let contenido = '<ul class="lista-bebidas list-group list-group-flush">'
@@ -36,8 +34,7 @@ function crearListadoTrago(listaTragos) {
 
 /**
  * Crea un item de un trago para mostrar en la vista.
- * @param {un trago} trago 
- * @returns 
+ * @returns una terjeta para mostrar el trago.
  */
 function crearItemTrago(trago) {
     var link = `trago.html?id=${trago.idDrink}`;
