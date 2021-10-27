@@ -9,6 +9,10 @@ const divListaIngredientes = document.getElementById("listaIngredientes");
 
 obtenerTrago(idTrago, mostrarTrago, mostarErrorTrago);
 
+/**
+ * Obtiene el id del trago que se envia por parametro en la url.
+ * @returns el id del trago
+ */
 function obtenerIdTrago() {
     let params = {};
     var paramstr = window.location.search.substr(1);
@@ -27,6 +31,10 @@ function obtenerIdTrago() {
     return params['id'];
 }
 
+/**
+ * Muesta en la vista la informacion del trago.
+ * @param {un trago} trago 
+ */
 function mostrarTrago(trago) {
     imagenTrago.src = trago.strDrinkThumb;
     nombreTrago.innerHTML = trago.strDrink;
@@ -37,6 +45,10 @@ function mostrarTrago(trago) {
     mostarIngredientes(trago);
 }
 
+/**
+ * Muesta en la vista los ingredientes de un trago.
+ * @param {un trago} trago 
+ */
 function mostarIngredientes(trago) {
     var nombresDeIngredientes = [];
     nombresDeIngredientes[0] = trago.strIngredient1;
@@ -58,6 +70,7 @@ function mostarIngredientes(trago) {
     var maxIngredientes = 15;
     var i = 0;
 
+    // consulta a la api cada ingrediente del trago
     while (i < maxIngredientes && nombresDeIngredientes[i] != null) {
         obtenetIngrediente(nombresDeIngredientes[i],
             mostrarIngrediente, 
@@ -66,10 +79,19 @@ function mostarIngredientes(trago) {
     }
 }
 
+/**
+ * Muesta en la vista un ingrediente.
+ * @param {un ingrediente} ingrediente 
+ */
 function mostrarIngrediente(ingrediente) {
     divListaIngredientes.innerHTML += crearItemIngrediente(ingrediente);
 }
 
+/**
+ * Crea un ingrediente para mostrar en la vista.
+ * @param {un ingrediente} ingrediente 
+ * @returns 
+ */
 function crearItemIngrediente(ingrediente) {
     let content =
     `<div class="card ingrediente" style="width: 8rem;">
@@ -81,12 +103,20 @@ function crearItemIngrediente(ingrediente) {
     return content;
 }
 
+/**
+ * Muestra al usuario un error al obtener un trago.
+ * @param {un error} error 
+ */
 function mostarErrorTrago(error) {
     console.log(error);
     imagenTrago.src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi1.wp.com%2Ftechdirectarchive.com%2Fwp-content%2Fuploads%2F2020%2F06%2F1_pUEZd8z__1p-7ICIO1NZFA.png%3Ffit%3D978%252C542%26ssl%3D1&f=1&nofb=1";
     nombreTrago.innerHTML = "Error al cargar bebida";
 }
 
+/**
+ * Muestra al usuario un error al obtener un ingrediente.
+ * @param {*} error 
+ */
 function mostrarErrorIngrediente(error) {
     console.log(error);
     divListaIngredientes.innerHTML +=
