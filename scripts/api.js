@@ -1,49 +1,49 @@
 const url = 'https://www.thecocktaildb.com/api/json/v1/1/';
-const searchCocktailByName = 'search.php?s=';
-const getCocktailById = 'lookup.php?i=';
-const randomCocktail = 'random.php';
-const getIngredientByName = 'search.php?i=';
+const buscarTragoPorNombre = 'search.php?s=';
+const obtenerTragoPorId = 'lookup.php?i=';
+const tragoAleatorio = 'random.php';
+const obetenerIngredientePorId = 'search.php?i=';
 
-function makeQuery(query, doSomething, functionError) {
-    fetch(url + query)
-        .then(result => result.json())
-        .then(data => {
-            doSomething(data);
+function consultarAPI(consulta, funcion, funcionError) {
+    fetch(url + consulta)
+        .then(resultado => resultado.json())
+        .then(datos => {
+            funcion(datos);
         })
-        .catch(err => {
-            functionError();
+        .catch(error => {
+            funcionError();
         });
 }
 
-function searchDrink(name, doSomething, functionError) {
-    makeQuery(searchCocktailByName + name, (data) => {
-        doSomething(data.drinks);
-    }, functionError);
+function buscarTrago(nombre, funcion, funcionError) {
+    consultarAPI(buscarTragoPorNombre + nombre, (datos) => {
+        funcion(datos.drinks);
+    }, funcionError);
 }
 
-function getDrink(id, doSomething, functionError) {
-    makeQuery(getCocktailById + id, (data) => {
-        doSomething(data.drinks[0]);
-    }, functionError);
+function obtenerTrago(idTrago, funcion, funcionError) {
+    consultarAPI(obtenerTragoPorId + idTrago, (datos) => {
+        funcion(datos.drinks[0]);
+    }, funcionError);
 }
 
-function getIngredient(name, doSomething, functionError) {
-    makeQuery(getIngredientByName + name, (data) => {
-        data.ingredients[0].image = `https://www.thecocktaildb.com/images/ingredients/${data.ingredients[0].strIngredient}.png`
-        doSomething(data.ingredients[0]);
-    }, functionError);
+function obtenetIngrediente(nombre, funcion, funcionError) {
+    consultarAPI(obetenerIngredientePorId + nombre, (datos) => {
+        datos.ingredients[0].image = `https://www.thecocktaildb.com/images/ingredients/${datos.ingredients[0].strIngredient}.png`
+        funcion(datos.ingredients[0]);
+    }, funcionError);
 }
 /*
-Search cocktail by name
+Search cocktail by nombre
 www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita
 
 List all cocktails by first letter
 www.thecocktaildb.com/api/json/v1/1/search.php?f=a
 
-Search ingredient by name
+Search ingredient by nombre
 www.thecocktaildb.com/api/json/v1/1/search.php?i=vodka
 
-Lookup full cocktail details by id
+Lookup full cocktail details by idTrago
 www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11007
 
 Lookup ingredient by ID

@@ -1,43 +1,60 @@
-var input = document.getElementById("buscador");
-var dinksList = document.getElementById("resultado");
+const busqueda = document.getElementById("buscador");
+const divListaTragos = document.getElementById("resultado");
 
-function buscarBebidas() {
-    searchDrink(input.value, showDrinks);
+/**
+ * Busca tragos a partir del valor en el input "busqueda" y los muestra en el div "resultado"
+ */
+function buscarTragos() {
+    buscarTrago(busqueda.value, mostrarListadoTragos);
 }
 
-function showDrinks(drinks) {
-    dinksList.innerHTML = createDrinkList(drinks);
+/**
+ * Muestra en la vista el listado de tragos buscados.
+ * @param {arraglo de tragos que devuelve la API} listaTragos 
+ */
+function mostrarListadoTragos(listaTragos) {
+    divListaTragos.innerHTML = crearListadoTrago(listaTragos);
 }
 
-function createDrinkList(drinks) {
-    var content = '<ul class="lista-bebidas list-group list-group-flush">'
+/**
+ * Crea un listado de tragos para mostrar en la vista.
+ * @param {arreglo de tragos} listaTragos 
+ * @returns 
+ */
+function crearListadoTrago(listaTragos) {
+    let contenido = '<ul class="lista-bebidas list-group list-group-flush">'
 
-    if(drinks != null) {
-        drinks.forEach(drink => {
-            content += `<li class="list-group-item">${createDrinkItem(drink)}</li>`;
+    if(listaTragos != null) {
+        listaTragos.forEach(trago => {
+            contenido += `<li class="list-group-item">${crearItemTrago(trago)}</li>`;
         });
     }
 
-    content += '</ul>';
-    return content;
+    contenido += '</ul>';
+    return contenido;
 }
 
-function createDrinkItem(drink) {
-    var link = `drink.html?id=${drink.idDrink}`;
+/**
+ * Crea un item de un trago para mostrar en la vista.
+ * @param {un trago} trago 
+ * @returns 
+ */
+function crearItemTrago(trago) {
+    var link = `trago.html?id=${trago.idDrink}`;
     
     var card =
     `<div class="card mb-3" style="max-width: 540px;">
             <div class="row g-0">
             <div class="col-md-4">
-                <img src="${drink.strDrinkThumb}" class="img-fluid rounded-start">
+                <img src="${trago.strDrinkThumb}" class="img-fluid rounded-start">
             </div>
         <div class="col-md-8">
             <div class="card-body">
                 <a href="${link}" target="_blank" >
-                <h3 class="card-title">${drink.strDrink}</h3>
+                <h3 class="card-title">${trago.strDrink}</h3>
                 </a>
-                <p class="card-text"><small class="text-muted">${drink.strAlcoholic}</small></p>
-                <p class="card-text"><small class="text-muted">${drink.strCategory}</small></p>
+                <p class="card-text"><small class="text-muted">${trago.strAlcoholic}</small></p>
+                <p class="card-text"><small class="text-muted">${trago.strCategory}</small></p>
             </div>
         </div>
     </div>`;
