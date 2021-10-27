@@ -2,7 +2,8 @@ html {
     min-height: 100%;
     position: relative;
 }
-body{
+
+body {
     background-image: url("../res/imgs/bar2.jpg");
     /*color: white; */
     /*background-repeat: repeat-y;
@@ -10,24 +11,30 @@ body{
     margin-bottom: 40px; */
     background-size: cover;
 }
-h1,h2{
-    
+
+h1,
+h2 {
     color: whitesmoke;
     text-align: left;
     font-size: xx-large
 }
-p,ul{
+
+p,
+ul {
     text-align: justify;
     font-style: normal;
     font-size: 2.5ex
 }
-table{
+
+table {
     text-align: center;
     background-color: black
 }
 
-footer{
-    background-color: goldenrod; text-align: center; height: 25px;
+footer {
+    background-color: goldenrod;
+    text-align: center;
+    height: 25px;
     color: black;
     border-radius: 5px;
     border: 2px solid bisque;
@@ -38,12 +45,11 @@ footer{
     width: 99%;
 }
 
-a:hover{
-    color:goldenrod
+a:hover {
+    color: goldenrod
 }
 
-
-.contenedor{
+.contenedor {
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 10px;
@@ -56,8 +62,7 @@ a:hover{
     box-shadow: 0 10px 10px 0px rgba(0, 0, 0, 0.8);
 }
 
-.contenedor .titulo{
-    
+.contenedor .titulo {
     font-size: 5ex;
     font-weight: bold;
     align-content: center;
@@ -70,11 +75,11 @@ a:hover{
     font-weight: bold;
 }
 
-#pestanas ul{
-    margin-left: -32px;    
+#pestanas ul {
+    margin-left: -32px;
 }
 
-#pestanas li{
+#pestanas li {
     list-style-type: none;
     float: left;
     text-align: center;
@@ -87,13 +92,13 @@ a:hover{
     padding: 0px 20px 0px 20px;
 }
 
-#pestanas a:link{
+#pestanas a:link {
     text-decoration: none;
     color: bisque;
 }
 
-#contenidopestanas{
-    clear: both;  
+#contenidopestanas {
+    clear: both;
     background: dimgray;
     padding: 20px 20px 20px 20px;
     border-radius: 5px;
@@ -112,39 +117,41 @@ a:hover{
     border-radius: 1em;
 }
 
-.formulario h2{
+.formulario h2 {
     text-align: left;
     color: #819395;
     text-decoration: underline;
     margin-left: 1em;
 }
 
-.formulario div1 + div1 {
+.formulario div1+div1 {
     margin-top: 1em;
 }
 
-.formulario label{
+.formulario label {
     display: inline-block;
     width: 80px;
     text-align: right;
     font-size: 20px;
 }
 
-.formulario input, textarea, select {
+.formulario input,
+textarea,
+select {
     /* Para asegurarse de que todos los campos de texto tienen las mismas propiedades de fuente
        Por defecto, las areas de texto tienen una fuente con monospace */
     font: 1em sans-serif;
-
     /* Para darle el mismo tamaño a todos los campos de texto */
     width: 300px;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-
     /* Para armonizar el look&feel del borde en los campos de texto */
     border: 2px solid #999;
 }
 
-.formulario input:focus, textarea:focus, select:focus {
+.formulario input:focus,
+textarea:focus,
+select:focus {
     /* Para dar un pequeño destaque en elementos activos*/
     border-color: #3DC1D0;
 }
@@ -152,42 +159,43 @@ a:hover{
 .formulario textarea {
     /* Para alinear campos de texto multilínea con sus labels */
     vertical-align: top;
-
     /* Para dar suficiente espacio para escribir texto */
     height: 10em;
-
     /* Para permitir a los usuarios cambiar el tamaño de cualquier textarea verticalmente
         No funciona en todos los navegadores */
     resize: vertical;
 }
 
 #gallery img {
-border: none;
-}
-#gallery_nav {
-padding-top:5px;
-margin-left:150px;
-float:none;
-width: 450px;
-text-align: center;
-}
-#gallery_output {
-margin-left:600px;
-width: 900px;
-height: 600px;
-overflow: hidden;
-}
-#gallery_output img {
-display: block;
-margin: 10px auto 0 auto;
+    border: none;
 }
 
-#cambiarEstilo a{
+#gallery_nav {
+    padding-top: 5px;
+    margin-left: 150px;
+    float: none;
+    width: 450px;
+    text-align: center;
+}
+
+#gallery_output {
+    margin-left: 600px;
+    width: 900px;
+    height: 600px;
+    overflow: hidden;
+}
+
+#gallery_output img {
+    display: block;
+    margin: 10px auto 0 auto;
+}
+
+#cambiarEstilo a {
     text-decoration: none;
     color: bisque;
 }
 
-#cambiarEstilo:hover{
+#cambiarEstilo:hover {
     background-color: #FC7373;
 }
 
@@ -210,5 +218,5 @@ margin: 10px auto 0 auto;
 
 .card {
     background-color: rgb(233, 230, 230);
-    box-shadow: 0 0px 10px 10px rgba(204, 204, 204, 0.8);  
+    box-shadow: 0 0px 10px 10px rgba(204, 204, 204, 0.8);
 }
