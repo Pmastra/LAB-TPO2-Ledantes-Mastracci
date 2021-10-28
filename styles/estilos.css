@@ -1,7 +1,4 @@
 body {
-    /*background-image: url("../res/imgs/bar2.jpg");
-    background-size: cover;*/
-
     /*para que el footer quede abajo*/
     display: flex;
     flex-direction: column;
@@ -39,7 +36,6 @@ footer {
     margin-bottom: 1em;
 }
 
-
 h1 {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -48,8 +44,6 @@ h1 {
     text-align: left;
     font-size: xx-large
 }
-
-
 
 a:hover {
     color: goldenrod
