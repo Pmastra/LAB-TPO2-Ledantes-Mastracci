@@ -1,8 +1,8 @@
 body {
-    background-image: url("../res/imgs/bar2.jpg");
-    background-size: cover;
-    padding-left: 20px;
-    padding-right: 20px;
+    /*para que el footer quede abajo*/
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
   }
 
   .contenedor {
@@ -57,14 +57,11 @@ body {
     min-width: 120px;
   }
 
-  footer{
-    background-color: goldenrod; text-align: center; height: 25px;
-    color: black;
-    border-radius: 5px;
-    border: 2px solid bisque;
-    position: absolute;
-    bottom: 5px;
-    margin-left: 10px;
-    margin-right: 10px;
-    width: 96%;
+  footer {
+    background-color: rgb(29, 29, 29);
+    text-align: center;
+    color: whitesmoke;
+    padding: 2em;
+    /*para que quede en el fondo*/
+    margin-top: auto;
 }
