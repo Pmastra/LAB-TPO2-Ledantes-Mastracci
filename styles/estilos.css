@@ -52,6 +52,7 @@ a:hover {
 .trago {
     margin: 1rem;
     width: 18rem;
+    height: max-content;
     background-color: rgb(233, 230, 230);
     box-shadow: 0 0px 10px 10px rgba(204, 204, 204, 0.8);
 }

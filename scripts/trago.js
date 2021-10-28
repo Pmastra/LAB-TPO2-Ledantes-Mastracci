@@ -115,7 +115,7 @@ function mostrarErrorIngrediente(error) {
     console.log(error);
     divListaIngredientes.innerHTML +=
         `<li>
-        <div class="card ingre" style="width: 8rem;">
+        <div class="card ingrediente" style="width: 8rem;">
             <imagenTrago src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi1.wp.com%2Ftechdirectarchive.com%2Fwp-content%2Fuploads%2F2020%2F06%2F1_pUEZd8z__1p-7ICIO1NZFA.png%3Ffit%3D978%252C542%26ssl%3D1&f=1&nofb=1" class="card-imagenTrago-top">
             <div class="card-body">
             <p class="card-text">Error al cargar ingrediente</p>

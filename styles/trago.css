@@ -1,67 +1,28 @@
-body {
-    /*para que el footer quede abajo*/
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
+.contenedor {
+  border-radius: 10px;
+  margin: 2em;
+}
 
-  .contenedor {
-    background: rgb(0, 0, 0);
-    border-radius: 10px;
-  }
+.col-trago {
+  display: flex;
+  justify-content: flex-end;
+  min-width: 300px;
+}
 
-  .contenido {
-    margin: 10px 10px 50px 10px;
-    background: rgb(0, 0, 0);
-    padding: 30px 50px 20px 20px;
-    border-radius: 10px;
-    box-shadow: 0 0px 10px 10px rgba(204, 204, 204, 0.8);
-  }
+.ingredientes h4 {
+  margin-left: 1em;
+}
 
-  h1, h4 {
-    color: rgb(228, 228, 228);
-  }
+#listaIngredientes {
+  list-style-type: none;
+  margin-top: 32px;
+  display: flex;
+  flex-flow: row wrap;
+}
 
-  .col-drink {
-    display: flex;
-    justify-content: flex-end;
-    min-width: 300px;
-  }
-
-  .title {
-    text-align: center;
-    margin-top: 16px;
-    margin-bottom: 32px;
-  }
-
-  .drink {
-    margin: 20px;
-    width: 18rem;
-    height: max-content;
-  }
-
-  .card {
-    box-shadow: 0 0px 10px 10px rgba(204, 204, 204, 0.8);
-  }
-
-  #listaIngredientes {
-    list-style-type: none;
-    margin-top: 32px;
-    display: flex;
-    flex-flow: row wrap;
-  }
-
-  .ingrediente {
-    margin-bottom: 32px;
-    margin-right: 32px;
-    min-width: 120px;
-  }
-
-  footer {
-    background-color: rgb(29, 29, 29);
-    text-align: center;
-    color: whitesmoke;
-    padding: 2em;
-    /*para que quede en el fondo*/
-    margin-top: auto;
+.ingrediente {
+  margin-bottom: 32px;
+  margin-right: 32px;
+  min-width: 120px;
+  box-shadow: 0 0px 10px 10px rgba(204, 204, 204, 0.8);
 }
