@@ -1,5 +1,6 @@
 const idTrago = obtenerIdTrago();
 
+const tituloTrago = document.getElementById("tituloTrago");
 const nombreTrago = document.getElementById("drinkName");
 const imagenTrago = document.getElementById("drinkImage");
 const instruccionesTrago = document.getElementById("drinkInstructions");
@@ -35,6 +36,7 @@ function obtenerIdTrago() {
  * Muesta en la vista la informacion del trago.
  */
 function mostrarTrago(trago) {
+    tituloTrago.innerHTML += trago.strDrink;
     imagenTrago.src = trago.strDrinkThumb;
     nombreTrago.innerHTML = trago.strDrink;
     categoriaTrago.innerHTML = trago.strCategory;
