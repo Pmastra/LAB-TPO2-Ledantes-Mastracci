@@ -11,10 +11,6 @@ body {
     box-shadow: 0 0px 10px 10px rgba(204, 204, 204, 0.8);
 }
 
-main {
-    background-color: rgb(8, 8, 44);
-}
-
 footer {
     background-color: rgb(29, 29, 29);
     text-align: center;
@@ -29,7 +25,7 @@ footer {
     margin-right: 3rem;
 }
 
-#buscador-area input{
+#buscador-area input {
     display: inline;
     max-width: 400px;
     margin-right: 10px;
@@ -58,8 +54,7 @@ a:hover {
 }
 
 #resultado {
-    padding: 16px;
     display: flex;
     flex-flow: row wrap;
-    margin: 16px;
+    margin: 1em;
 }
