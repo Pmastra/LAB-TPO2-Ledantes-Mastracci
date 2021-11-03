@@ -29,11 +29,13 @@ function mostrarListadoTragos(listaTragos) {
  */
 function crearListadoTrago(listaTragos) {
     let contenido = ''
-
+    console.log(listaTragos);
     if (listaTragos != null) {
         listaTragos.forEach(trago => {
             contenido += crearItemTrago(trago);
         });
+    } else {
+        contenido = crearItemTragoVacio();
     }
 
     return contenido;
@@ -58,6 +60,23 @@ function crearItemTrago(trago) {
                 <p class="card-text"><strong>Tipo: </strong>
                     <span id="drinkTipo">${trago.strAlcoholic}</span>
                 </p>
+            </div>
+        </div>`;
+    return card;
+}
+
+/**
+ * Crea un item de un trago para mostrar en la vista.
+ * @returns una terjeta para mostrar el trago.
+ */
+ function crearItemTragoVacio() {
+    let img = "res/imgs/trago-vacio.jfif";
+    let card =
+        `<div class="trago card">
+            <img src="${img}" class="card-img-top" id="drinkImage">
+            <div class="card-body">
+                <h3 class="card-title" id="drinkName">Sin resultados</h3>
+                <p class="card-text ">No se encontro nigun trago que coincida con la búsqueda</p>
             </div>
         </div>`;
     return card;

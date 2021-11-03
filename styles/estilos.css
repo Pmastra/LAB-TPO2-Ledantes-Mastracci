@@ -16,7 +16,7 @@ footer {
     text-align: center;
     color: whitesmoke;
     padding: 2em;
-    /*para que quede en el fondo*/
+    /* para que quede en el fondo cuando el tamaño del body es chico */
     margin-top: auto;
 }
 
