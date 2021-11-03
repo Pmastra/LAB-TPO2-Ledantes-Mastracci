@@ -23,11 +23,6 @@ function obtenerIdTrago() {
         var tmparr = paramarr[i].split("=");
         params[tmparr[0]] = tmparr[1];
     }
-    if (params['id']) {
-        console.log('El valor del parámetro variable es: ' + params['id']);
-    } else {
-        console.log('No se envió el parámetro variable');
-    }
 
     return params['id'];
 }
@@ -105,7 +100,6 @@ function crearItemIngrediente(ingrediente) {
  * Muestra al usuario un error al obtener un trago.
  */
 function mostarErrorTrago(error) {
-    console.log(error);
     imagenTrago.src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi1.wp.com%2Ftechdirectarchive.com%2Fwp-content%2Fuploads%2F2020%2F06%2F1_pUEZd8z__1p-7ICIO1NZFA.png%3Ffit%3D978%252C542%26ssl%3D1&f=1&nofb=1";
     nombreTrago.innerHTML = "Error al cargar bebida";
 }
@@ -114,7 +108,6 @@ function mostarErrorTrago(error) {
  * Muestra al usuario un error al obtener un ingrediente.
  */
 function mostrarErrorIngrediente(error) {
-    console.log(error);
     divListaIngredientes.innerHTML +=
         `<li>
         <div class="card ingrediente" style="width: 8rem;">

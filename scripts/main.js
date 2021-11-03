@@ -28,8 +28,7 @@ function mostrarListadoTragos(listaTragos) {
  * @returns una lista <ul> con los tragos.
  */
 function crearListadoTrago(listaTragos) {
-    let contenido = ''
-    console.log(listaTragos);
+    let contenido = '';
     if (listaTragos != null) {
         listaTragos.forEach(trago => {
             contenido += crearItemTrago(trago);
