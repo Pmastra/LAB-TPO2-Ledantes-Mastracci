@@ -66,7 +66,7 @@ function crearItemTrago(trago) {
 }
 
 /**
- * Crea un item de un trago para mostrar en la vista.
+ * Crea un item de un trago vacio para mostrar en la vista, representando que no hay tragos para mostrar.
  * @returns una terjeta para mostrar el trago.
  */
  function crearItemTragoVacio() {
@@ -76,7 +76,7 @@ function crearItemTrago(trago) {
             <img src="${img}" class="card-img-top" id="drinkImage">
             <div class="card-body">
                 <h3 class="card-title" id="drinkName">Sin resultados</h3>
-                <p class="card-text ">No se encontro nigun trago que coincida con la búsqueda</p>
+                <p class="card-text ">No se encontró ningún trago que coincida con la búsqueda</p>
             </div>
         </div>`;
     return card;
